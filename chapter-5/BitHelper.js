@@ -18,6 +18,22 @@ class BitHelper {
     {
         return parseInt(binary, 2);
     }
+
+    /**
+     * 
+     * @param {Number} num 
+     * @returns {Number} Number of set bits
+     */
+    countSetBits(num)
+    {
+        let count = 0;
+        while (num > 0) 
+        {
+            num &= (num-1);
+            count++;
+        }
+        return count;
+    }
 }
 
 module.exports = BitHelper;
