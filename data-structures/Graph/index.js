@@ -54,7 +54,6 @@ class Graph {
     removeVertex(value)
     {
         const current = this.nodes.get(value);
-        console.log("current", current);
         if(current)
         {
             for(const node of this.nodes.values())
@@ -70,7 +69,7 @@ class Graph {
      * @param {number} source 
      * @param {number} destination 
      */
-    removeVertex(source, destination) {
+    removeEdge(source, destination) {
         const sourceNode = this.nodes.get(source);
         const destinationNode = this.nodes.get(destination);
 
@@ -94,7 +93,6 @@ class Graph {
         }
 
         return res.join('\n');
-
         
     }
 

@@ -1,8 +1,8 @@
-export class Queue{
+class Queue{
 
-    constructor(maxSize = 1000){
+    constructor(elements = [], maxSize = 1000){
         this.maxSize = maxSize;
-        this.elements = [];
+        this.elements = elements;
     }
 
     enqueue(element)
@@ -26,5 +26,11 @@ export class Queue{
         return this.elements.shift();
     }
 
+    size()
+    {
+        return this.elements.length;
+    }
 
 }
+
+module.exports = Queue;

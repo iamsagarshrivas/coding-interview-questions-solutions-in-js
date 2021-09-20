@@ -1,9 +1,14 @@
-export class Stack {
+class Stack {
 
-    constructor(maxSize = 1000)
+    /**
+     * 
+     * @param {number[]} elements 
+     * @param {number} maxSize 
+     */
+    constructor(elements = [], maxSize = 1000)
     {
         this.maxSize = maxSize;
-        this.elements = [];
+        this.elements = elements;
     }
 
     push(element)
@@ -36,4 +41,11 @@ export class Stack {
 
     }
 
+    size()
+    {
+        return this.elements.length;
+    }
+
 }
+
+module.exports = Stack;
