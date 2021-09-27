@@ -18,6 +18,7 @@ function bfs(graph, start){
         if(!visited.has(current))
         {
             console.log("Current node", current);
+            visited.add(current);
         }
 
         
@@ -30,9 +31,6 @@ function bfs(graph, start){
 
             }
         }        
-
-        visited.add(current);
-
     }
 
 

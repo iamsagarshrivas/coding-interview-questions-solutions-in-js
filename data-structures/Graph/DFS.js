@@ -5,9 +5,8 @@ const Stack = require("../Stack");
  * 
  * @param {Graph} graph 
  * @param {number} start 
- * @param {number} key 
  */
-function dfs(graph, start, key) 
+function dfs(graph, start) 
 {
 
     /**@type {Set<number>} */
@@ -21,6 +20,8 @@ function dfs(graph, start, key)
         if(!visited.has(current))
         {
             console.log("Current node:", current);
+            visited.add(current);
+
         }
 
         const adjList = graph.nodes.get(current).listAdjacent();
@@ -32,14 +33,10 @@ function dfs(graph, start, key)
 
             }
         }        
-
-        visited.add(current);
         
     }
     return visited;
-    
-
-
 }
+
 
 module.exports = dfs;
